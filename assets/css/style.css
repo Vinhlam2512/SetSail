@@ -1,0 +1,101 @@
+.app{
+
+}
+#header{
+
+}
+.header__top{
+    height: var(--height-header);
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+.header__top--contact{
+    height: 100%;
+}
+.header__top--contact ul {
+    display: flex;
+    line-height: var(--height-header);
+}
+.header__top--contact a{
+    font-size: 14px;
+    color: var( --primary-color);
+    margin-right: 20px;
+    
+}
+.header__top--text{
+    font-size: 13px;
+    color: white;
+    padding-left: 10px;
+}
+.header__top--social ul a:hover,
+.header__top--text:hover{
+    color: var( --primary-color);
+}
+.header__top--end{
+    display: flex;
+    align-items: center;
+}
+.header__top--social{
+    margin-right: 15px;
+}
+.header__top--social ul{
+    display: flex;
+}
+.header__top--social ul a{
+    font-size: 14px;
+    color: #fff;
+    margin-right: 20px;
+    
+}
+.header__top--language{
+    position: relative;
+    width: 140px;
+    height: var(--height-header);
+    line-height: var(--height-header);
+    background-color: #3abdc1;
+    font-size: 13px;
+    font-weight: 600;
+    flex-direction: column;
+}
+.header__top--language a{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.header__top--language a i {
+    position: absolute;
+    top: 30%;
+    right: 36px;
+}
+.header__top--language:hover .second-nav{
+    visibility: visible;
+    max-height: 100vh;
+}
+.second-nav{
+    background-color: var(--primary-color);
+    top: var(--height-header);
+    max-height: 0;
+    transition: max-height 1s linear;  
+    visibility: hidden;
+}
+.second-nav ul li{
+    padding: 12px 0;
+}
+.header__top--account{
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__top--account a svg{
+    color: #fff;
+    height: 24px;
+    
+}
+.header__logo{
+
+}
