@@ -6,6 +6,8 @@
 :root{
     --height-header: 46px;
     --primary-color: #3fd0d4;
+    --height-logo: 143px;
+    --height-nav: 82px;
 }
 html{
     font-family: Poppins, sans-serif;
@@ -15,6 +17,9 @@ body{
 }
 a{
     text-decoration: none;
+}
+.active{
+    color: var(--primary-color) !important;
 }
 a .underline{
     position: relative;
@@ -40,8 +45,8 @@ ul li{
     list-style: none;
 }
 .second-nav{    
+    position: absolute;
     width: 100%;
-    text-align: center;
     box-shadow: 0 3px 13px 0 rgb(0 0 0 / 3%);
     visibility: hidden;
     transition: max-height 1s linear;  
