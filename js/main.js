@@ -1,16 +1,9 @@
 
 
 
-// const headerNav = document.querySelector('.header__nav');
-// const underLine = headerNav.querySelectorAll("a .underline:after");
+const firstNavs = document.querySelectorAll('li .have_second-nav--2');
+const secondNavs = document.querySelectorAll('.second-nav--2')
 
-// underLine.forEach(function(span,index) {
-//     span.addEventListener('mouseover', function() {
-//         underLine[index].style.backgroundColor = 'var(--primary-color) !important';
-//     })
-//     span.addEventListener('mouseover', function() {
-//         underLine[index].classList.remove("active");
-//     })
-// })
-
-
+firstNavs[0].addEventListener('blur',function() {
+    secondNavs[0].style.visibility = 'visible';
+})

@@ -21,6 +21,26 @@ a{
 .active{
     color: var(--primary-color) !important;
 }
+a .underline--white{
+    position: relative;
+    line-height: 24px;
+}
+a .underline--white:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+}
+a .underline--white:hover::after {
+    visibility: visible;
+    width: 100%;
+    transition: all 0.3s ease-out;
+}
 a .underline{
     position: relative;
     line-height: 24px;
@@ -32,26 +52,56 @@ a .underline:after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #FFF;
+    background-color: var(--primary-color);
     visibility: hidden;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-out;
 }
 a .underline:hover::after {
     visibility: visible;
     width: 100%;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-out;
 }
 ul li{
     list-style: none;
 }
+
 .second-nav{    
     position: absolute;
-    width: 100%;
     box-shadow: 0 3px 13px 0 rgb(0 0 0 / 3%);
-    visibility: hidden;
-    transition: max-height 1s linear;  
+    background-color: #fff;
+    top: 100%;
+    padding: 28px 0 30px;
     max-height: 0;
+    transition: max-height 1s linear;  
+    color: #333;
+    visibility: visible;
 }
 .second-nav ul li{
+    display: block;
     cursor: pointer;
+}
+
+.second-nav--2{
+    position: absolute;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 3%);
+    background-color: #fff;
+    padding: 28px 0 30px;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    color: #333;
+    top: 45%;
+    left: 100%;
+    visibility: hidden;
+}
+.second-nav--2-2{
+    position: absolute;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 3%);
+    background-color: #fff;
+    padding: 28px 0 30px;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    color: #333;
+    top: 45%;
+    left: 100%;
+    visibility: hidden;
 }
