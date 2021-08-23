@@ -89,9 +89,9 @@
             </div>
             <div class="header__nav">
                 <ul class="nav">
-                    <!-- <li>
+                    <li class="js-li">
                         <a href="" class="active"><span class="underline">Home</span></a>
-                        <div>
+                        <div >
                             <ul class="second-nav">
                                 <li><a href=""><span class="underline">Travel Agency</span> </a></li>
                                 <li><a href=""><span class="underline">Winter Holidays</span> </a></li>
@@ -106,7 +106,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="js-li">
                         <a href=""> <span class="underline">Pages</span> </a>
                         <div>
                             <ul class="second-nav">
@@ -121,7 +121,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="js-li">
                         <a href=""> <span class="underline">Destinations</span> </a>
                         <div class="">
                             <ul class="second-nav">
@@ -131,7 +131,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="js-li">
                         <a href=""> <span class="underline">Tours</span> </a>
                         <div>
                             <ul class="second-nav">
@@ -142,12 +142,12 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="js-li">
                         <a href=""> <span class="underline">Blog</span> </a>
                         <ul class="second-nav">
                             <a href=""> <span class="underline">Blog Masonry</span> </a>
                             <li>
-                                <a href="" class="have_second-nav--2"><span class="underline">Blog Standard</span> <i class="fal fa-chevron-right"></i> </a>
+                                <a href="" class="have_second-nav--2"><span class="underline">Blog Standard</span> <i class=" arrow fal fa-chevron-right"></i> </a>
                                 <div>
                                     <ul class="second-nav--2">
                                         <li><a href=""> <span class="underline">Right Sidebar</span> </a></li>
@@ -157,7 +157,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href=""class="have_second-nav--2"><span class="underline">Post Types </span> <i class="fal fa-chevron-right"></i> </a>
+                                <a href=""class="have_second-nav--2"><span class="underline">Post Types </span> <i class=" arrow fal fa-chevron-right"></i> </a>
                                 <div>
                                     <ul class="second-nav--2-2">
                                         <li><a href=""> <span class="underline">Standard</span> </a></li>
@@ -172,13 +172,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="js-li">
                         <a href=""><span class="underline">Shop</span></a>
-                        <div>
                             <ul class="second-nav">
-                                <a href=""> <span class="underline">Product List</span> </a>
-                                <a href=""> <span class="underline">Product Single</span> </a>
-                                <a href="" class="have_second-nav--2"> <span class="underline">Shop layouts</span> <i class="fal fa-chevron-right"></i> </a>
+                                <li><a href=""> <span class="underline">Product List</span> </a></li>
+                                <li><a href=""> <span class="underline">Product Single</span> </a></li>
+                                <li>
+                                    <a href="" class="have_second-nav--2"> <span class="underline">Shop layouts</span> <i class=" arrow fal fa-chevron-right"></i> </a>
                                     <div>
                                         <ul class="second-nav--2">
                                             <li><a href=""> <span class="underline">Three Columns</span> </a></li>
@@ -186,19 +186,21 @@
                                             <li><a href=""> <span class="underline">Full Width</span> </a></li>
                                         </ul>
                                     </div>
-                        <a href="" class="have_second-nav--2"> <span class="underline">Shop Pages</span> <i class="fal fa-chevron-right"></i> </a>
-                        <div>
-                            <ul class="second-nav--2">
-                                <li><a href=""> <span class="underline">My Account</span> </a></li>
-                                <li><a href=""> <span class="underline">Cart</span> </a></li>
-                                <li><a href=""> <span class="underline">Checkout</span> </a></li>
+                                </li>
+                                <li>
+                                    <a href="" class="have_second-nav--2"> <span class="underline">Shop Pages</span> <i class=" arrow fal fa-chevron-right"></i> </a>
+                                    <div>
+                                        <ul class="second-nav--2-2">
+                                            <li><a href=""> <span class="underline">My Account</span> </a></li>
+                                            <li><a href=""> <span class="underline">Cart</span> </a></li>
+                                            <li><a href=""> <span class="underline">Checkout</span> </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
-                            </ul>
-                        </div>
-                    </li> -->
+                    </li>
                     <li>
-                        <a href=""> <span class="underline">Elements</span> </a>
+                        <a href="" > <span class="underline">Elements</span> </a>
                         <div class=" nav--full">
                             <ul class="">
                                 <li>
@@ -261,10 +263,28 @@
                 </ul>
             </div>
         </div>
-        <div class="content">
+        <div id="content" class=" grid wide">
+            <div class="slider">
+                <div class="l-slider">
+                    <a href="" class="l-slider--arrow"><i class="fal fa-chevron-left"></i></a>
+                    <img src="./assets/img/l-slider1.jpg" alt="" class="js-l-slider ">
+                    <img src="./assets/img/sliderText1.png" alt="" class="slider__text js-text-slider ">
+                    <img src="./assets/img/l-slider2.jpg" alt="" class="js-l-slider show">
+                    <img src="./assets/img/sliderText2.png" alt="" class="slider__text js-text-slider show">
+                    <img src="./assets/img/l-slider3.jpg" alt="" class="js-l-slider ">
+                    <img src="./assets/img/sliderText3.png" alt="" class="slider__text js-text-slider">
+                </div>
+                <div class="r-slider">
+                    <img src="./assets/img/r-slider1.jpg" alt="" class="js-r-slider ">
+                    <img src="./assets/img/r-slider2.jpg" alt="" class="js-r-slider show">
+                    <img src="./assets/img/r-slider3.jpg" alt="" class="js-r-slider">
+                    <a href="" class="r-slider--arrow"><i class="fal fa-chevron-right"></i></a>
 
+                </div>
+            </div>
         </div>
     </div>
 </body>
-<script src="js/main.js"></script>
+<script src="js/dropDown.js"></script>
+<script src="js/slider.js"></script>
 </html>

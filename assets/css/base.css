@@ -21,6 +21,12 @@ a{
 .active{
     color: var(--primary-color) !important;
 }
+.arrow {
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+}
+
 a .underline--white{
     position: relative;
     line-height: 24px;
@@ -71,37 +77,36 @@ ul li{
     background-color: #fff;
     top: 100%;
     padding: 28px 0 30px;
-    max-height: 0;
-    transition: max-height 1s linear;  
     color: #333;
-    visibility: visible;
-}
-.second-nav ul li{
-    display: block;
-    cursor: pointer;
+    max-height: 0;
+    transition: max-height 1s ease-out;  
+    visibility: hidden;
+    z-index: 999;
 }
 
+.second-nav ul li{
+    cursor: pointer;
+}
+.second-nav--2-2,
 .second-nav--2{
     position: absolute;
     box-shadow: 0 3px 13px 0 rgb(0 0 0 / 3%);
     background-color: #fff;
     padding: 28px 0 30px;
-    opacity: 0;
-    transition: opacity .5s ease-out;
     color: #333;
-    top: 45%;
     left: 100%;
-    visibility: hidden;
+    display: none;
+    z-index: 999;
+
+}
+.second-nav--2{
+    top: 30%;
+    z-index: 0;
 }
 .second-nav--2-2{
-    position: absolute;
-    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 3%);
-    background-color: #fff;
-    padding: 28px 0 30px;
-    opacity: 0;
-    transition: opacity .5s ease-out;
-    color: #333;
-    top: 45%;
-    left: 100%;
-    visibility: hidden;
+    z-index: 0;
+    top: 60%;
+}
+.show{
+    display: block !important;
 }
