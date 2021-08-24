@@ -75,7 +75,7 @@
     background-color: var(--primary-color);
     top: var(--height-header);
     max-height: 0;
-    transition: max-height 1s linear;  
+    transition: max-height 2s linear;  
     visibility: hidden;
 }
 .header__top--language:hover .header__second-nav{
@@ -132,7 +132,7 @@
     width: 257px;
 }
 .nav > li > a{
-    padding-bottom: 36px;
+   padding-bottom: 36px;
 }
 
 
@@ -141,18 +141,11 @@
     visibility: visible;
     max-height: 100vh;
 }
-.nav li:hover .second-nav li{
-    visibility: visible;
-    max-height: 100vh;
-}
+
 .second-nav li a{
     display: block;
 }
 
-.second-nav--2 li{
-    background-color: #fff;
-    max-height: 0;
-}
 
 .second-nav li:hover .second-nav--2{
     display: block;
@@ -173,6 +166,7 @@
     transition: max-height .6s linear;  
     overflow: hidden;
     visibility: hidden;
+    z-index: 99;
 }
 .nav--full > ul{
    width: 1300px;
@@ -202,7 +196,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 32px;
-    padding: 0 15px;
+    
 }
 .slider i {
     font-size: 24px;
@@ -218,6 +212,12 @@
     height: 55px;
     text-align: center;
     color: var( --primary-color);
+    z-index: 99;
+}
+.l-slider--arrow i {
+    position: absolute;
+    left: 34%;
+
 }
 .r-slider--arrow{
     position: absolute;
@@ -229,7 +229,7 @@
     height: 55px;
     text-align: center;
     color: var( --primary-color);
-
+    z-index: 99;
 }
 .r-slider--arrow:hover,
 .l-slider--arrow:hover{
@@ -240,18 +240,81 @@
     display: none;
     z-index: 0;
 }
+
 .r-slider,
 .l-slider{
     position: relative;
-
-
+    
 }
 .r-slider img{
     height: 790px;
-    
 }
 .slider__text{
     position: absolute;
     left: 20%;
-    top: 37%;
+    top: 36%;
+}
+.popular__tours {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    padding-top: 128px;
+    padding-left: 16px;
+}
+.img{
+
+}
+.popular__tours--des{
+
+}
+.popular__tours--des-text{
+    display: block;
+}
+.popular__tours--des-text h1{
+    font-size: 40px;
+    color: #212121;
+}
+.popular__tours--des-text p{
+    font-size: 17px;
+    line-height: 28px;
+    margin-top: 16px;
+    font-weight: 400;
+    color: #505050;
+}
+.popular__tours--des-progress{
+    
+}
+.popular__tours--des-progress .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 29px 0 11px;
+    color: #212121;
+    font-weight: 600;
+}
+.progress{
+    width: 100%;
+    height: 22px;
+    background-color: #f0ede8;
+}
+.progress .current1{
+    z-index: 1;
+    height: 100%;
+    max-width: 0%;
+    background-color: var(--primary-color);
+    /* transition: max-width .4s linear; */
+}
+.progress .current2{
+    z-index: 1;
+    height: 100%;
+    max-width: 0%;
+    background-color: var(--primary-color);
+    /* transition: max-width .4s linear; */
+
+}
+.progress .current3{
+    z-index: 1;
+    height: 100%;
+    max-width: 0%;
+    background-color: var(--primary-color);
+    /* transition: max-width .6s linear; */
+
 }

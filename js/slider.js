@@ -8,23 +8,23 @@ const textSlider = document.querySelectorAll('.js-text-slider');
 var index = 1;
 
 showSlider = function() {
-    var slide = [];
     var numberOfSliders = lSlider.length;
    
     if(lSlider[index].classList.contains('show')){ 
+        textSlider[index].classList.remove('show');
         lSlider[index].classList.remove('show');
         rSlider[index].classList.remove('show');
-        textSlider[index].classList.remove('show');
         index+= 1;
     }
     if(index == numberOfSliders){
-        slide.length = 0;
         index = 0;
     }
         lSlider[index].classList.add('show');
         rSlider[index].classList.add('show');
-        textSlider[index].classList.add('show');
+        setTimeout(function(){
+            textSlider[index].classList.add('show');
+        },900)
 
     console.log('1');
 }
-setInterval(showSlider, 1000);
+setInterval(showSlider, 4000);

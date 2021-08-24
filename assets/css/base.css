@@ -47,11 +47,11 @@ a .underline--white:hover::after {
     width: 100%;
     transition: all 0.3s ease-out;
 }
-a .underline{
+.underline{
     position: relative;
     line-height: 24px;
 }
-a .underline:after {
+.underline:after {
     content: "";
     position: absolute;
     width: 0;
@@ -62,7 +62,7 @@ a .underline:after {
     visibility: hidden;
     transition: all 0.3s ease-out;
 }
-a .underline:hover::after {
+a:hover .underline:after {
     visibility: visible;
     width: 100%;
     transition: all 0.3s ease-out;
@@ -79,7 +79,7 @@ ul li{
     padding: 28px 0 30px;
     color: #333;
     max-height: 0;
-    transition: max-height 1s ease-out;  
+    transition: max-height 1s linear;  
     visibility: hidden;
     z-index: 999;
 }
@@ -109,4 +109,16 @@ ul li{
 }
 .show{
     display: block !important;
+    animation: slide 2s linear;
+ 
+}
+@keyframes slide{
+    from { 
+        opacity: 0.9;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    to{
+        opacity: 1;
+        background-color: transparent;
+    }
 }
