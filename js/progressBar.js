@@ -2,19 +2,19 @@ const progress1 = document.querySelector('.current1');
 const progress2 = document.querySelector('.current2');
 const progress3 = document.querySelector('.current3');
 const current = document.getElementsByClassName('percent')
-const a = document.querySelector('.popular__tours--des');
+const total = document.querySelector('.progress');
 
+var check = true;
 window.addEventListener("scroll", function (e) {
     var scroll = this.scrollY;
-    console.log(progress1.clientHeight)
-    if(scroll >= 700 ){
+    if(scroll >= 700 && check == true) {
         upTo76();
         upTo92();
         upTo86();
+        check = false;
     }
     
 });
-
 var upTo76 = function (){
     var i = 0;
     setInterval(function () {
