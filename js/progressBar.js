@@ -1,49 +1,33 @@
-const progress1 = document.querySelector('.current1');
-const progress2 = document.querySelector('.current2');
-const progress3 = document.querySelector('.current3');
-const current = document.getElementsByClassName('percent')
-const total = document.querySelector('.progress');
 
-var check = true;
+
+const progress = document.querySelectorAll('.current');
+const current = document.querySelectorAll('.title .percent')
+
+var percent = [];
+var check2 = true;
+function getPercent() {
+    for (var i = 0; i < progress.length; i++) {
+        percent[i] = progress[i].getAttribute('percent');
+    }
+}
 window.addEventListener("scroll", function (e) {
     var scroll = this.scrollY;
-    if(scroll >= 700 && check == true) {
-        upTo76();
-        upTo92();
-        upTo86();
-        check = false;
+    if (scroll >= 700 && check2 == true) {
+        for (var i = 0; i < progress.length; i++) {
+            load(i);
+        }
+        check2 = false;
     }
-    
-});
-var upTo76 = function (){
-    var i = 0;
-    setInterval(function () {
-        i+= 1;
-        if(i < 77){
-            current[0].innerHTML = i + '%';
-            progress1.style.maxWidth = i + '%';
-        }
-    },30)
- 
-}
-var upTo92 = function (){
-    var i = 0;
-    setInterval(function () {
-        i+= 1;
-        if(i < 93){
-            current[1].innerHTML = i + '%';
-            progress2.style.maxWidth = i + '%';
-        }
-    },30)
-}
-var upTo86= function (){
-    var i = 0;
-    setInterval(function () {
-        i+= 1;
-        if(i < 87){
-            current[2].innerHTML = i + '%';
-            progress3.style.maxWidth = i + '%';
-        }
-    },30)
-}
 
+});
+function load(i) {
+    var j = 0;
+    setInterval(function () {
+        j++;
+        getPercent();
+        if (j <= percent[i]) {
+            current[i].innerHTML = j + '%';
+            progress[i].style.maxWidth = j + '%';
+        }
+    }, 30)
+}

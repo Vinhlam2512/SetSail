@@ -15,7 +15,7 @@ function add(index) {
     rSlider[index].classList.add('show');
     setTimeout(function() {
         textSlider[index].classList.add('show');
-    },600);
+    },500);
 }
 function remove() {
     for (var i = 0; i < numberOfSliders; i++) {
@@ -24,10 +24,38 @@ function remove() {
         textSlider[i].classList.remove('show');
     }
 }
+nextBtn.addEventListener('click', function(e) {
+    clearInterval(autoSliderInterval);
+    check = true;
+    e.preventDefault();
+    remove();
+    index++;
+    if(index > numberOfSliders - 1){
+        index = 0;
+        add(index);
+    } else {
+        add(index);
+    }
+    autoSliderInterval = setInterval(autoSlider, 3000);
+})
+prevBtn.addEventListener('click', function(e) {
+    clearInterval(autoSliderInterval);
+    check = true;
+    e.preventDefault();
+    remove();
+    index--;
+    if(index < 0){
+        index = 2;
+        add(index);
+    } else {
+        add(index);
+    }
+    autoSliderInterval = setInterval(autoSlider, 3000);
+})
 function autoSlider() {
     if (index < numberOfSliders) {
         if(check == true) {
-            index++;
+            index = index > numberOfSliders - 1 ? 0 : index++;
             add(index);
         }else{
             add(index);
@@ -39,39 +67,6 @@ function autoSlider() {
         add(index);
         index++;
     }
-    console.log('1111111111111111111');
 }
 
-nextBtn.addEventListener('click', function(e) {
-    check = true;
-    e.preventDefault();
-    clearInterval(autoSliderInterval);
-    remove();
-    index++;
-    if(index > numberOfSliders - 1){
-        index = 0;
-        add(index);
-        console.log(index);
-    } else {
-        remove();
-        add(index);
-    }
-    autoSliderInterval = setInterval(autoSlider, 4000);
-})
-prevBtn.addEventListener('click', function(e) {
-    check = true;
-    e.preventDefault();
-    clearInterval(autoSliderInterval);
-    remove();
-    index--;
-    if(index < 0){
-        index = 2;
-        add(index);
-        console.log(index);
-    } else {
-        remove();
-        add(index);
-    }
-    autoSliderInterval = setInterval(autoSlider, 4000);
-})
-var autoSliderInterval = setInterval(autoSlider, 4000);
+var autoSliderInterval = setInterval(autoSlider, 3000);
