@@ -1,0 +1,21 @@
+/* PC */
+@media (min-width:1024px) {
+}
+/* Tablet */
+@media (min-width:740px) and (max-width:1023px) {
+    .header__top{
+        height: 69px;
+        background-color: var(--primary-color);
+    }
+    .header__logo,
+    .header__top--contact,
+    .header__top--end{
+        display: none;
+    }
+    .nav__mobile a svg{
+        color: #fff;
+    }
+}
+/* Mobile  */
+@media (max-width:739px) {
+}

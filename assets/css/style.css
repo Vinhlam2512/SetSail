@@ -513,10 +513,9 @@ ul li i{
 }
 #footer{
     background-color: #212121;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 15px;
-    padding: 106px 125px 76px;
+}
+#footer .footer__top{
+    padding: 125px 0;
 }
 #footer a{
     color: #fff;
@@ -545,6 +544,7 @@ ul li i{
     color: #fff;
     font-weight: 500;
 }
+#footer a:hover,
 #footer p:hover,
 #footer span:hover{
     color: var(--primary-color);
@@ -600,9 +600,43 @@ ul li i{
     color: #212121;
     cursor: pointer;
 }
-.copyRight {
-    grid-column: 1/span 4;
-    font-size: 13px;
+.footer__bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.copyRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px !important;
     text-align: center;
     color: #a9a9a9 !important;
+}
+.copyRight p:hover{
+    cursor: default;
+}
+
+.backToTop{
+    background-color: #fff;
+    position: fixed ;
+    bottom: 5%;
+    right: 2%;
+    border-radius: 50%;
+    box-shadow: 4px 6px 15px 0 rgb(0 0 0 / 8%);
+    text-align: center;
+    line-height: 60px;
+    color: var(--primary-color);
+    font-weight: 600;
+    display: none;
+}
+.backToTop:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.backToTop span{
+    display: block;
+    height: 60px;
+    width: 60px;
 }

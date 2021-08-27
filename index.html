@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/respondsive.css">
     <link rel="stylesheet" href="./assets/Font icon/fontawesome-pro/css/all.min.css">
     
 </head>
 <body>
     <div class="app">
-        <div id="header">
+        <div id="header grid wide">
             <div class="header__top">
                 <div class="header__top--contact">
                     <ul>
@@ -38,7 +39,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="header__top--end">
                     <div class="header__top--social">
                         <ul>
@@ -257,11 +257,12 @@
                                         <li><a href="#"> <span class="underline">Custom Fonts</span> </a></li>
                                     </ul>
                                 </li>
-                            </div>
                         </div>
+                        
                     </li>
                 </ul>
             </div>
+            
         </div>
         <div id="content" class=" grid wide">
             <div class="slider">
@@ -448,62 +449,71 @@
             </div>
         </div>
         <div id="footer">
-            <div class="contact">
-                <a href=""><img src="./assets/img/logo.jpg" alt=""></a>
-                <span style="cursor: default; color: #a9a9a9;">Lorem ipsum dolor sit ametco nsec te tuer adipiscing elitae</span>
-                <ul>
-                    <li>
-                        <a href="#" class="">
-                            <i class="fal fa-envelope"></i>
-                            <span class="header__top--text">setsail@qode.com</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fal fa-phone-alt"></i>
-                            <span class="header__top--text">1 562 867 5309</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fal fa-map-marker-alt">
-                            </i><span class="header__top--text">Broadway & Morris St, New York</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="post">
-                <h2>Our Recent Posts</h2>
-                <p>Visit Thailand, Bali And China</p>
-                <span>September 7, 2016</span>
-                <p>The Sound Of Our Jungle</p>
-                <span>September 7, 2016</span>
-                <p>New Year, New Resolutions!</p>
-                <span>September 7, 2016</span>
-            </div>
-            <div class="subscribe">
-                <h2>Subscribe to our Newsletter</h2>
-                <p style="cursor: default; color: #a9a9a9;">Etiam rhoncus. Maecenas temp us, tellus eget condimentum rho</p>
-                <form action="#">
-                    <div class="name">
-                        <i class="fal fa-user"></i>
-                        <input type="text" placeholder="Name">
+            <div class="footer__top">
+                <div class="row grid wide">
+                    <div class="contact col l-3">
+                        <a href=""><img src="./assets/img/logo.jpg" alt=""></a>
+                        <span style="cursor: default; color: #a9a9a9;">Lorem ipsum dolor sit ametco nsec te tuer adipiscing elitae</span>
+                        <ul>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fal fa-envelope"></i>
+                                    <span class="header__top--text">setsail@qode.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-phone-alt"></i>
+                                    <span class="header__top--text">1 562 867 5309</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-map-marker-alt">
+                                    </i><span class="header__top--text">Broadway & Morris St, New York</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="email">
-                        <i class="fal fa-envelope"></i>
-                        <input type="text" placeholder="Email">
+                    <div class="post col l-3">
+                        <h2>Our Recent Posts</h2>
+                        <p>Visit Thailand, Bali And China</p>
+                        <span>September 7, 2016</span>
+                        <p>The Sound Of Our Jungle</p>
+                        <span>September 7, 2016</span>
+                        <p>New Year, New Resolutions!</p>
+                        <span>September 7, 2016</span>
                     </div>
-                    <button>SUBSCRIBE</button>
-                </form>
+                    <div class="subscribe col l-3">
+                        <h2>Subscribe to our Newsletter</h2>
+                        <p style="cursor: default; color: #a9a9a9;">Etiam rhoncus. Maecenas temp us, tellus eget condimentum rho</p>
+                        <form action="#">
+                            <div class="name">
+                                <i class="fal fa-user"></i>
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div class="email">
+                                <i class="fal fa-envelope"></i>
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <button>SUBSCRIBE</button>
+                        </form>
+                    </div>
+                    <div class="instagram col l-3">
+                        <h2>Our Instagram</h2>
+                        <p style="cursor: default; color: #a9a9a9;">Aliquam lorem ante, dapibus inviver raqui feugiat a, tellus. Phasellus null</p>
+                    </div>
+                </div>
             </div>
-            <div class="instagram">
-                <h2>Our Instagram</h2>
-                <p style="cursor: default; color: #a9a9a9;">Aliquam lorem ante, dapibus inviver raqui feugiat a, tellus. Phasellus null</p>
-            </div>
-            <div class="copyRight">
-                <span>Powered by @ <a href="">Lâm Vinh</a></span>
+            <div class="footer__bottom">
+                <div class=" grid wide">
+                    <p class="copyRight">Powered by @<a href="">Lâm Vinh</a></p>
+                </div>
             </div>
         </div>
+        <a href="#header" class="backToTop">
+            <span>TOP</span>
+        </a>
     </div>
 </body>
 <script src="./js/dropDown.js"></script>
@@ -511,4 +521,5 @@
 <script src="./js/progressBar.js"></script>
 <script src="./js/count.js"></script>
 <script src="./js/playVideo.js"></script>
+<script src="./js/backTop.js"></script>
 </html>
