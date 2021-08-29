@@ -246,8 +246,7 @@ ul li i{
     right: 0;
     opacity: 0;
     transition: opacity 2s ease-in-out;
-    z-index: -1;
-
+    z-index: 0;
 }
 .l-slider{
     position: absolute;
@@ -255,7 +254,7 @@ ul li i{
     left: 0;
     opacity: 0;
     transition: opacity 2s ease-in-out;
-    z-index: -1;
+    z-index: 0;
 }
 .slider__text{
     position: absolute;
@@ -361,6 +360,7 @@ ul li i{
 .toursList__place:nth-child(7){
     grid-column: 4/span 1;
 }
+
 /* .toursList{
     display: grid;
     grid-gap: 30px;
@@ -417,10 +417,8 @@ ul li i{
     background-color: #1c1c1c;
 }
 .quantity{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 24px;
-    padding: 131px 24px;
+    
+    padding: 131px 12px;
 }
 .quantity__des{
     display: flex;
@@ -450,7 +448,9 @@ ul li i{
 .video:hover{
     cursor: pointer;
 }
-
+.video-play{
+    width: 100%;
+}
 .video__btn{
     display: block;
 }
@@ -493,7 +493,7 @@ ul li i{
 }
 .tours__des--content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 33px 60px;
     padding-right: 60px;
 }
